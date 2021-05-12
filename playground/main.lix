@@ -1,0 +1,14 @@
+node.is Node "root": ()
+for i in 1..5:
+(
+    node.add (i = i)
+)
+
+attr.is Attribute "Alice" = "Wonderland"
+node.add attr
+node.add ("Child": (
+    "ChildrenAge" = 20,
+    "SubChild" : ("AliceName" = "Alice")
+))
+
+node.Save "my.xml"
